@@ -23,44 +23,22 @@ Paste the ISSUE.md file into a new issue in that repository.
 
 ---
 
-## Ticket Triage Policy (Current)
+## Ticket Triage Policy
 
-We currently triage support tickets using Severity only.
+Triage happens daily. Use the table below to set Severity, then derive the default Priority.
 
-### Severity levels
-- Low means minor annoyance with an easy workaround
-- Medium means a meaningful user impact but workarounds exist
-- High means blocks key workflows or causes data loss
+### Priority levels
 
-### Current rules
-- Triage happens daily
-- High severity should be addressed first
-- We do not currently define priority labels, default ownership, or a fast triage checklist
+| Priority | Default Severity | Definition |
+|----------|-----------------|------------|
+| **P0** Critical | High (outage) | Production down or active data loss — respond immediately, 24/7 |
+| **P1** High | High | Core feature broken, no workaround — fix within one business day |
+| **P2** Medium | Medium | Meaningful impact, workaround available — resolve this sprint |
+| **P3** Low | Low | Minor annoyance or cosmetic issue — schedule for a future sprint |
 
----
+### How to triage in 60 seconds
 
-## Priority Levels
-
-| Priority | Label | Definition |
-|----------|-------|------------|
-| P0 | Critical | Production is down or data loss is actively occurring. Requires immediate response 24/7. |
-| P1 | High | Core functionality is broken for many users with no workaround. Must be addressed within one business day. |
-| P2 | Medium | Meaningful user impact exists but a workaround is available. Target resolution within the current sprint. |
-| P3 | Low | Minor annoyance or cosmetic issue with little user impact. Schedule for a future sprint. |
-
-## Severity → Priority Mapping
-
-| Severity | Default Priority |
-|----------|-----------------|
-| High | P0 or P1 (P0 if production is down, P1 otherwise) |
-| Medium | P2 |
-| Low | P3 |
-
-## How to Triage in 60 Seconds
-
-1. **Read the ticket** — understand what is broken and who is affected.
-2. **Assign a Severity** — High / Medium / Low based on user impact.
-3. **Set the default Priority** — use the Severity → Priority mapping above.
-4. **Adjust if needed** — bump up to P0 if production is down; bump down if impact is narrower than it appears.
-5. **Add a label** — apply the matching priority label (P0 / P1 / P2 / P3) in GitHub.
-6. **Route it** — assign to the on-call engineer for P0/P1, or to the backlog for P2/P3.
+1. **Read the ticket** — what's broken and who's affected?
+2. **Assign Severity** — High (blocks workflows / data loss) · Medium (workaround exists) · Low (minor).
+3. **Set Priority** — use the table above; bump to P0 if production is actively down.
+4. **Label & route** — apply the P0–P3 label; assign to on-call for P0/P1, backlog for P2/P3.
