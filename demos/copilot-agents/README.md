@@ -25,7 +25,7 @@ Paste the ISSUE.md file into a new issue in that repository.
 
 ## Ticket Triage Policy
 
-Triage happens daily. Use the table below to set Severity, then derive the default Priority.
+Triage happens daily. Use the table below to set Priority (P0–P3); Severity follows the default mapping shown.
 
 ### Priority levels
 
